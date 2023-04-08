@@ -70,8 +70,18 @@ describe('User model', () => {
   });
 
   describe('Role', () => {
-    it('role should be present', (done) => {
+    it('should be present', (done) => {
       chai.expect(User.attributes).to.contain.key('role');
+      done();
+    });
+    it('should contain key type as string', (done) => {
+      chai.expect(User.attributes.role).to.include({type: 'string'});
+      done();
+    });
+    it('should contain exactly roles names', (done) => {
+      chai.expect(User.attributes.role.validations.isIn).to.eql(
+        ['SUPER_ADMIN', 'ADMIN', 'TEACHER', 'STUDENT']
+      );
       done();
     });
   });

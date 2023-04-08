@@ -34,7 +34,8 @@ module.exports = {
     },
     role: {
       type: 'string',
-      description: 'Role of the user either super admin, admin, teacher, student'
+      description: 'Role of the user either super admin, admin, teacher, student',
+      isIn: ['SUPER_ADMIN', 'ADMIN', 'TEACHER', 'STUDENT']
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

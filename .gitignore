@@ -132,3 +132,7 @@ lib-cov
 *.out
 *.pid
 
+# Test
+.nyc_output
+coverage
+
