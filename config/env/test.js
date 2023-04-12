@@ -1,7 +1,7 @@
 // config/env/test.js
 module.exports = {
   // set port for test environment so Sails can be running and test can run as well
-  port: 1336,
+  port: 1330,
   // Skip grunt hook as we won't be needing it for running our tests
   hooks: {
     grunt: false
@@ -27,4 +27,4 @@ module.exports = {
   custom: {
     verifyEmailAddresses: false
   }
-}
+};
